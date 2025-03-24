@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <form action="/skills/new">
+        <button>New Course</button>
+    </form>
+    <%for(skill of skills){%>
+        <h3><%=skill.name%></h3>
+        <p><%=skill.description%></p>
+        <form action="/skills/<%=skill.id%>" method="get">
+            <button>show</button>
+        </form>
+        <%}%>
+</body>
+</html>
