@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Home</h1>
-    <form action="/skills/new">
-        <button>New Course</button>
-    </form>
-    <%for(skill of skills){%>
-        <h3><%=skill.name%></h3>
-        <p><%=skill.description%></p>
-        <form action="/skills/<%=skill.id%>" method="get">
-            <button>show</button>
+<% layout('/layouts/boilerplate') %>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+
+    <body>
+    <div class="container">
+        <h1>Skill Enhancement Platform</h1>
+        <form action="/skills/new">
+            <button><i class="fas fa-plus-circle"></i> New Course</button>
         </form>
-        <%}%>
+        <div class="mt-4">
+            <% for(skill of skills) { %>
+                <div class="skill-card">
+                    <h3><%= skill.name %></h3>
+                    <p><%= skill.description %></p>
+                    <form action="/skills/<%= skill.id %>" method="get">
+                        <button>Show Details</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
 </body>
-</html>

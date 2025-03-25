@@ -6,6 +6,8 @@ const path = require("path"); // For serving static files
 const methodOverride = require("method-override"); // For PUT & DELETE requests
 const wrapAsync = require("./utils/wrapAsync");
 const ExpressError = require("./utils/ExpressError");
+const engine = require("ejs-mate");
+
 
 const app = express();
 
@@ -13,9 +15,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true })); // Parse form data
 app.use(express.json()); // Parse JSON data
 app.use(methodOverride("_method")); // For PUT & DELETE requests
+app.engine("ejs", engine); // Use ejs-mate for layouts
 app.set("view engine", "ejs"); // Set EJS as the view engine
 app.set("views", path.join(__dirname, "views")); // Set views directory
-app.use(express.static(path.join(__dirname, "public"))); // Serve static files (CSS, JS, Images)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 📌 Routes
 app.get("/", wrapAsync(async (req, res) => {

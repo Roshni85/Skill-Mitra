@@ -1,0 +1,103 @@
+/* 🌟 Full Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Matching Home Page */
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* 🎭 Glassmorphism Form Box */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* ✨ Title Styling */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 📌 Input Fields */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+/* 🔥 Placeholder Styling */
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 🏆 Highlight Input Fields on Focus */
+input:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* 🎮 Button Styling (Same as Home Page) */
+button {
+    background: linear-gradient(135deg, #ff4d8b, #e797be); 
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* 🔥 Button Hover Effect */
+button:hover {
+    background: #ff7eb3; /* Matching Home Page */
+    transform: scale(1.1);
+}
+
+/* 🌀 "Go Back" Link Inside Form */
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* ⚡ Hover Effect on "Go Back" */
+.back-link:hover {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* 🔄 Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

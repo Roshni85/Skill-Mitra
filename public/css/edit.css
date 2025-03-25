@@ -1,0 +1,106 @@
+/* 🎨 Full-Screen Background */
+body {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradient */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌟 Center Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* 📝 Edit Skill Heading */
+h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/* 📋 Centered Form */
+form {
+    background: rgba(255, 255, 255, 0.2); /* Transparent Card Effect */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 📌 Labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 🔲 Input Fields & Textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* ✅ Update Button */
+button {
+    background: linear-gradient(135deg, #ff72b6, #ff5d94);
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ⬅️ Go Back Link */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* 🔄 Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

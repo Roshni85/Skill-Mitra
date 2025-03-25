@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust</title>
+
+    <!-- ✅ Main Styles -->
+    <link rel="stylesheet" href="/css/navbar.css"> 
+    <link rel="stylesheet" href="/css/footer.css">  <!-- Add this if footer has its own CSS -->
+
+    <!-- ✅ Single Bootstrap Version (Use Bootstrap 5.3, latest) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+    <!-- ✅ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- ✅ Font Awesome (Only One) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<body>
+    
+    <!-- ✅ Static Navbar -->
+    <!-- <%- include("../includes/navbar.ejs") %>   -->
+
+    <!-- ✅ Main Content -->
+    <div class="main-wrapper">
+            <%- body %> 
+    </div>
+    <!-- ✅ Footer -->
+    <%- include("../includes/footer.ejs") %>
+
+    <!-- ✅ JS Files (Moved to Bottom for Performance) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Updated full jQuery version -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> <!-- Updated Bootstrap JS -->
+    
+    <!-- ✅ Custom Scripts -->
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
