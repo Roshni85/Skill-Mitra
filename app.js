@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const Skill = require("./models/skill");
@@ -24,6 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get("/", wrapAsync(async (req, res) => {
     let skills = await Skill.find();
     res.render("home.ejs", { skills });
+    console.log(process.env.MONGO_URI);
+    
 }));
 
 app.get("/skills/new", (req, res) => {
